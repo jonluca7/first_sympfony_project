@@ -9,4 +9,4 @@ class HomeController
     {
         dd(rand(0, 250));
     }
-}
+ }
