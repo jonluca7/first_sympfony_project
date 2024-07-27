@@ -1,12 +1,18 @@
 <?php
 namespace App\controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use symfony\component\HttpFoundation\dd;
 
-class HomeController
+class HomeController extends AbstractController
 {
     public function numbers()
     {
-        dd(rand(0, 250));
+        $number =rand(0, 250);
+
+        return $this->render('base.html.twig', [
+            "number" => $number
+        ]);
+
     }
  }
